@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template:
+  "header header header" 50px
+  "left-menu main right-menu" 1fr /
+  150px 1fr 200px;
+
+  gap: 10px;
+}
+
+.header {
+  background-color: aliceblue;
+  grid-area: header;
+}
+
+.left-menu {
+  background-color: rgb(53, 123, 183);
+  grid-area: left-menu;
+}
+
+.main {
+  background-color: rgb(176, 207, 235);
+  grid-area: main;
+}
+
+.right-menu {
+  background-color: rgb(53, 176, 204);
+  grid-area: right.menu;
+}
+
+.header,
+.left-menu,
+.main,
+.right-menu {
+  border-radius: 5px;
+}
