@@ -47,6 +47,27 @@
   }
 }
 
+@media screen and (max-width: 499px) {
+  .container {
+    grid-template:
+    "header"  50px
+    "main"    1fr /
+     1fr;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .right-menu {
+    display: none;
+  }
+
+  .left-menu {
+    diplay: none;
+  }
+}
+
 .header {
   background-color: aliceblue;
   grid-area: header;

@@ -18,6 +18,37 @@
   gap: 10px;
 }
 
+
+@media screen and (max-width: 987px) {
+  .container {
+    grid-template:
+    "header     header"  50px
+    "left-menu  main"    1fr /
+     150px      1fr;
+  }
+
+  .right-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .container {
+    grid-template:
+    "header"  50px
+    "main"    1fr /
+     1fr;
+  }
+
+  .right-menu {
+    display: none;
+  }
+
+  .left-menu {
+    diplay: none;
+  }
+}
+
 .header {
   background-color: aliceblue;
   grid-area: header;
