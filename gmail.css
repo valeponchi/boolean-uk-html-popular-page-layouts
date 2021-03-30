@@ -14,7 +14,7 @@
   "left-menu main     right-menu  footer" 1fr /
   150px      1fr      200px       50px;
 
-  gap: 10px;
+  grid-gap: 10px;
 }
 
 @media screen and (max-width: 1265px) {
