@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 
 .container {
@@ -15,59 +14,92 @@
   "left-menu main right-menu" 1fr /
   150px 1fr 200px;
 
-  gap: 10px;
+  grid-gap: 10px;
 }
 
 
-@media screen and (max-width: 987px) {
-  .container {
-    grid-template:
-    "header     header"  50px
-    "left-menu  main"    1fr /
-     150px      1fr;
-  }
 
-  .right-menu {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  .container {
-    grid-template:
-    "header"  50px
-    "main"    1fr /
-     1fr;
-  }
-
-  .right-menu {
-    display: none;
-  }
-
-  .left-menu {
-    diplay: none;
-  }
-}
 
 .header {
-  background-color: aliceblue;
+  background-color: rgb(245, 238, 146);
   grid-area: header;
 }
 
+
+
+
+/* left-menu SECTION */
 .left-menu {
-  background-color: rgb(53, 123, 183);
   grid-area: left-menu;
+
+  /* how I want its boxes to be: */
+  display: grid;
+  grid-gap: 10px;
+  /* grid-auto-rows: repeat(100px, minmax(200px, 1fr)); */
 }
 
+.left-menu-box {
+  border: 1px solid black;
+  background-color: rgb(53, 123, 183);
+
+  /* how I want its items to be: */
+  display: grid;
+  place-items: center;
+}
+
+.left-menu-box .nico-photo {
+  width: 50px;
+}
+                /* end of left menu SECTION */
+
+
+
+
+
+                /* main SECTION */
 .main {
-  background-color: rgb(176, 207, 235);
   grid-area: main;
+  
+  display: grid;
+  grid-gap: 10px;
 }
 
-.right-menu {
-  background-color: rgb(53, 176, 204);
-  grid-area: right.menu;
+.main-box {
+  border: 1px solid black;
+  background-color: rgb(176, 207, 235);
+  
+  /* how I want its items to be: */
+  display: grid;
+  place-items: center;
 }
+                /* end of left menu SECTION */
+
+
+
+
+                /* right-menu SECTION */
+.right-menu {
+  grid-area: right-menu;
+  
+  display: grid;
+  grid-gap: 10px;
+}
+
+.right-menu-box {
+  border: 1px solid black;
+  background-color: rgb(53, 176, 204);
+  
+  
+  /* how I want its items to be: */
+  display: grid;
+  place-items: center;
+}
+                /* end of right menu SECTION */
+
+
+
+
+
 
 .header,
 .left-menu,
@@ -75,3 +107,37 @@
 .right-menu {
   border-radius: 5px;
 }
+
+
+/* MEDIA */
+
+@media screen and (max-width: 987px) {
+.container {
+grid-template:
+"header     header"  50px
+"left-menu  main"    1fr /
+150px      1fr;
+}
+
+.right-menu {
+display: none;
+}
+
+
+@media screen and (max-width: 499px) {
+.container {
+grid-template:
+"header"  50px
+"main"    1fr /
+1fr;
+}
+
+.right-menu {
+display: none;
+}
+
+.left-menu {
+display: none;
+}
+}
+/* end of media */
