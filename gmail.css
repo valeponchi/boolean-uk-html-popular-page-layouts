@@ -4,10 +4,12 @@
   box-sizing: border-box;  
 }
 
+
+
 .container {
   width: 100vw;
   height: 100vh;
-
+  
   display: grid;
   grid-template:
   "header    header   header      header" 50px
@@ -17,6 +19,97 @@
   grid-gap: 10px;
 }
 
+.header,
+.left-menu,
+.left-menu-box,
+.main,
+.main-box,
+.right-menu,
+.right-menu-box {
+  display: grid;
+}
+
+.main,
+.right-menu {
+  grid-gap: 5px;
+}
+
+.left-menu-box,
+.main-box,
+.right-menu-box {
+place-items: center;  
+}
+
+/* header SECTION */
+.header {
+  background-color: aliceblue;
+  grid-area: header;
+}
+                  /* header section ends */
+
+
+
+                  /* left-menu SECTION */
+.left-menu {
+  grid-area: left-menu;  
+  grid-gap: 10px;
+}
+
+.left-menu-box {
+  border: 1px solid rgb(102, 96, 96);
+  border-radius: 5px;
+  background-color: rgb(53, 123, 183);
+  grid-auto-rows: 50px;
+}
+                  /* left-menu SECTION ENDs */
+
+
+
+                  /* main section START */
+.main {
+  grid-area: main;
+}
+
+.main-box {
+  background-color: rgb(176, 207, 235);
+  border: 1px solid grey;
+}
+
+.main-top-box { 
+  border: 1px solid black;
+}
+                  /* main section ENDs */
+
+
+
+                  /* right menu section */
+.right-menu {
+  grid-area: right-menu;
+}
+
+.right-menu-box {
+  background-color: rgb(53, 176, 204);
+  border: 1px solid black;
+}
+                  /* right menu section ENDS */
+
+
+
+.footer {
+  background-color: rgb(153, 228, 245);
+  grid-area: footer;
+}
+
+.header,
+.left-menu,
+.main,
+.right-menu,
+.footer {
+  border-radius: 5px;
+}
+
+
+                        /* MEDIA */
 @media screen and (max-width: 1265px) {
   .container {
     grid-template:
@@ -64,39 +157,6 @@
   }
 
   .left-menu {
-    diplay: none;
+    display: none;
   }
-}
-
-.header {
-  background-color: aliceblue;
-  grid-area: header;
-}
-
-.left-menu {
-  background-color: rgb(53, 123, 183);
-  grid-area: left-menu;
-}
-
-.main {
-  background-color: rgb(176, 207, 235);
-  grid-area: main;
-}
-
-.right-menu {
-  background-color: rgb(53, 176, 204);
-  grid-area: right.menu;
-}
-
-.footer {
-  background-color: rgb(153, 228, 245);
-  grid-area: footer;
-}
-
-.header,
-.left-menu,
-.main,
-.right-menu,
-.footer {
-  border-radius: 5px;
 }
